@@ -13,4 +13,4 @@ before_script:
 script: 
     - ng build --prod
     - npm install sonar-scanner
-    - Dsonar.projectKey=VanalstineDJ_git-practice -Dsonar.organization=vanalstinedj-github -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+    - sonar-scanner -Dsonar.projectKey=VanalstineDJ_git-practice -Dsonar.organization=vanalstinedj-github -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
