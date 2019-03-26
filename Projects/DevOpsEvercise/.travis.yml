@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+    - "6.9"
+
+branches:
+    only:
+        - master
+
+
+before_script:
+    - npm install -g @angular/cli
+
+script: 
+    - ng build --prod
+    - npm install sonar-scanner
+    - sonar-scanner.bat -Dsonar.projectKey=VanalstineDJ_git-practice -Dsonar.organization=vanalstinedj-github -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=143258702e38c969e2b563ca67f8d3f82be20f7b
